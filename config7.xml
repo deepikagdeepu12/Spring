@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	  xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+ 
+ <util:list list-class="java.util.ArrayList" id="x">
+ 
+ <value>BMW</value>
+ <value>AUDI</value>
+ <value>NANO</value>
+ 
+ </util:list>
+ 
+ <util:set set-class="java.util.LinkedHashSet" id="y">
+ 
+ <value>deepikag@656</value>
+ <value>bhanu@67e63</value>
+ <value>kavya@7867</value>
+ </util:set>
+ 
+ <util:map map-class="java.util.TreeMap" id="z">
+ 
+ <entry key="deepu" value="g"/>
+ <entry key="bhanu" value="priya"/>
+ <entry key ="kav" value="ya"/>
+ </util:map>
+ 
+ <!--  <util:properties id="i">
+ <prop key="driver_class_name"> com.mysql.jdbc.Driver</prop>
+ <prop key="url">jdbc.mysql.localhost:3306/lo1</prop>
+ <prop key="username">root</prop>
+ <prop key="password">root</prop>
+ 
+ </util:properties>-->
+ 
+ <bean class="com.tap.collection.model.Emp5" name="emp5">
+ 
+ <property name="vehicel" ref="x"/>
+ <property name="email" ref="y"/>
+ <property name="name" ref="z"/>
+ <!--  <property name="dbpro" ref="i"/>-->
+ </bean>
+ 
+ 
+ 
+ 
+</beans>
